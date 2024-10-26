@@ -25,3 +25,4 @@ module fulladder (input logic A, B, Cin, output logic S, Cout);
 	assign Cout = ( A & B ) | ( (A ^ B) & Cin );
 endmodule
 
+
