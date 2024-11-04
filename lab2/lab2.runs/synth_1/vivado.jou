@@ -3,11 +3,11 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Oct 26 10:35:00 2024
-# Process ID: 24732
+# Start of session at: Mon Nov  4 14:41:01 2024
+# Process ID: 860
 # Current directory: C:/Users/burka/OneDrive/Belgeler/Github/Cs223-lab-2/lab2/lab2.runs/synth_1
-# Command line: vivado.exe -log fulladder_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fulladder_top.tcl
-# Log file: C:/Users/burka/OneDrive/Belgeler/Github/Cs223-lab-2/lab2/lab2.runs/synth_1/fulladder_top.vds
+# Command line: vivado.exe -log fulladder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fulladder.tcl
+# Log file: C:/Users/burka/OneDrive/Belgeler/Github/Cs223-lab-2/lab2/lab2.runs/synth_1/fulladder.vds
 # Journal file: C:/Users/burka/OneDrive/Belgeler/Github/Cs223-lab-2/lab2/lab2.runs/synth_1\vivado.jou
 # Running On        :Maales
 # Platform          :Windows Server 2016 or Windows 10
@@ -19,6 +19,6 @@
 # Host memory       :16828 MB
 # Swap memory       :6442 MB
 # Total Virtual     :23271 MB
-# Available Virtual :7643 MB
+# Available Virtual :9978 MB
 #-----------------------------------------------------------
-source fulladder_top.tcl -notrace
+source fulladder.tcl -notrace

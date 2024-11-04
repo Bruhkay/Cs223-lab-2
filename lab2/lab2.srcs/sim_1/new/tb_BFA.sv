@@ -20,25 +20,49 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_full_adder();
-logic A, B, Cin, S, Cout;
-
-fulladder dut(
-.A(A),
-.B(B),
-.Cin(Cin),
-.S(S),
-.Cout(Cout)
-);
-
-   initial begin
-        A = 0; B = 0; Cin = 0; #10;
+module tb_twobitadder;
+    
+    logic [1:0] A, [1:0] B, Cin, [1:0] S, Cout;
+    twobitadder dut (
+        .A(A),
+        .B(B),
+        .Cin(Cin),
+        .S(S),
+        .Cout(Cout) );
+    initial begin
+        A[0] = 0; A[1]= 0; B[0] = 0; B[1]=0; Cin = 0; #10;
         Cin = 1; #10;
-        B = 1; Cin = 0; #10;
+        B[1]=1; Cin = 0; #10;
         Cin = 1; #10;
-        A = 1; B = 0; Cin = 0; #10;
+        B[0] = 1; B[1]=0; Cin = 0; #10;
         Cin = 1; #10;
-        B = 1; Cin = 0; #10;
+        B[1]=1; Cin = 0; #10;
         Cin = 1; #10;
-    end
+        A[1]= 1; B[0] = 0; B[1]=0; Cin = 0; #10;
+        Cin = 1; #10;
+        B[1]=1; Cin = 0; #10;
+        Cin = 1; #10;
+        B[0] = 1; B[1]=0; Cin = 0; #10;
+        Cin = 1; #10;
+        B[1]=1; Cin = 0; #10;
+        Cin = 1; #10;
+        A[0] = 1; A[1]= 0; B[0] = 0; B[1]=0; Cin = 0; #10;
+        Cin = 1; #10;
+        B[1]=1; Cin = 0; #10;
+        Cin = 1; #10;
+        B[0] = 1; B[1]=0; Cin = 0; #10;
+        Cin = 1; #10;
+        B[1]=1; Cin = 0; #10;
+        Cin = 1; #10;
+        A[1]= 1; B[0] = 0; B[1]=0; Cin = 0; #10;
+        Cin = 1; #10;
+        B[1]=1; Cin = 0; #10;
+        Cin = 1; #10;
+        B[0] = 1; B[1]=0; Cin = 0; #10;
+        Cin = 1; #10;
+        B[1]=1; Cin = 0; #10;
+        Cin = 1; #10;
+     end
 endmodule
+
+

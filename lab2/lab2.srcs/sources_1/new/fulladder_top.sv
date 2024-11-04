@@ -20,28 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fulladder_top (
+module fulladder (
     input logic [15:0] sw,    // Switches for inputs (A, B, Cin)
     output logic [15:0] LED   // LEDs for outputs (S, Cout)
 );
-    logic A, B, Cin;         // Inputs to full adder
-    logic S, Cout;           // Outputs from full adder
+    logic A, B, Bin;         // Inputs to full adder
+    logic D, Bout;           // Outputs from full adder
 
+    
     // Map switches to inputs
     assign A = sw[15];
-    assign B = sw[14];
-    assign Cin = sw[13];
+    assign B=sw[14];
+    assign Bin=sw[13];
 
-    // Instantiate fulladder
-    fulladder uut (
-        .A(A),
-        .B(B),
-        .Cin(Cin),
-        .S(S),
-        .Cout(Cout)
-    );
+    logic s1, c1, c2;
+    xor(s1, A , B);
+    xor(D, s1, Bin); //gives us D
+    and(c1, ~A, B);
+    and(c2, ~s1, Bin);
+    or(Bout, c1, c2); //gives us Bout
+    
 
     // Map outputs to LEDs
-    assign LED[15] = S;
-    assign LED[14] = Cout;
+    assign LED[15] = D;
+    assign LED[14] = Bout;
 endmodule
